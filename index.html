@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hardware Argentina</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/normalize.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar bg-dark text-light mb-0">
+      <div class="container justify-content-evenly">
+        <a class="navbar-brand text-light fs-4 logo_principal" href="index.html">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-devices-pc me-4" width="44"
+            height="44" viewBox="0 0 24 24" stroke-width="1" stroke="#ffffff" fill="none" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M3 5h6v14h-6z" />
+            <path d="M12 9h10v7h-10z" />
+            <path d="M14 19h6" />
+            <path d="M17 16v3" />
+            <path d="M6 13v.01" />
+            <path d="M6 16v.01" />
+          </svg>
+          Hardware Argentina
+        </a>
+
+        <form class="d-flex buscador" role="search">
+          <input class="form-control me-2" type="search" placeholder="Buscar">
+          <button class="btn btn-outline-success" type="submit">Buscar</button>
+        </form>
+
+
+        <a href="./pages/carrito.html">
+          <button class=" btn btn-light fs-5 rounded d-flex text-uppercase p-2">
+            <div>
+              <span class="pe-1">Carrito</span>
+              <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20">
+                <path
+                  d="M5.812 17.125q-.458 0-.75-.302-.291-.302-.291-.74 0-.437.302-.739t.739-.302q.438 0 .74.302t.302.739q0 .459-.302.75-.302.292-.74.292Zm8.355 0q-.438 0-.74-.302t-.302-.74q0-.437.302-.739t.761-.302q.437 0 .739.302t.302.739q0 .459-.302.75-.302.292-.76.292ZM4.833 4.5h10.25q.355 0 .511.24.156.239.052.51l-1.688 4.271q-.125.312-.396.5-.27.187-.604.187H6.625l-.979 1.73q-.125.187-.011.406.115.218.365.218h9.229v.605H6.062q-.666 0-.968-.521-.302-.521.031-1.042l1.208-2.062-2.771-6.417H1.958v-.604H4Z" />
+              </svg>
+            </div>
+            <span class="contadorCarrito text-light bg-black rounded-pill px-2">0</span>
+          </button>
+        </a>
+        <a href="./pages/iniciarSesion.html">
+          <button type="button" class="ms-4 btn btn-light fs-5 rounded d-flex p-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user bg-black rounded-circle"
+              width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <circle cx="12" cy="7" r="4" />
+              <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+            </svg>
+            <span class="text-uppercase ps-2">Iniciar Sesion</span>
+          </button>
+        </a>
+      </div>
+    </nav>
+
+    <section class="bg-black d-flex justify-content-evenly p-3">
+      <div class="dropdown">
+        <a class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          Categorias
+        </a>
+        <ul class="dropdown-menu swing-in-top-fwd mt-5 fs-3">
+          <li><a class="dropdown-item" href="#">Procesadores</a></li>
+          <li><a class="dropdown-item" href="#">Placas Madres</a></li>
+          <li><a class="dropdown-item" href="#">Monitores</a></li>
+          <li><a class="dropdown-item" href="#">Memorias RAM</a></li>
+          <li><a class="dropdown-item" href="#">Fuentes</a></li>
+          <li><a class="dropdown-item" href="#">Placas de Video</a></li>
+          <li><a class="dropdown-item" href="#">Perifericos</a></li>
+          <li><a class="dropdown-item" href="#">Fuentes</a></li>
+          <li><a class="dropdown-item" href="#">Almacenamiento</a></li>
+          <li><a class="dropdown-item" href="#">Refrigeracion</a></li>
+          <li><a class="dropdown-item" href="#">Gabinetes</a></li>
+          <li><a class="dropdown-item" href="#"></a></li>
+
+        </ul>
+      </div>
+
+      <a href="">Ofertas</a>
+      <a href="">Nosotros</a>
+      <a href="">Ayuda</a>
+    </section>
+  </header>
+
+  <div class="d-flex justify-content-center">
+    <span
+    class="text-light rounded fs-3 p-2 d-none scale-in-ver-center text-uppercase cartelAgregado"></span>
+
+  </div>
+  
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="./assets/carrusel1.webp" alt="Los Angeles" style="width:100%;">
+      </div>
+      <div class="item">
+        <img src="./assets/carrusel2.webp" alt="Chicago" style="width:100%;">
+      </div>
+    </div>
+  </div>
+
+
+
+  <main class="container-md main">
+    <h3 class="p-3 mt-5 bg-black rounded mb-3">Articulos mas Vendido</h3>
+    <section class="viewPrincipal text-light mx-5 mt-0 d-flex flex-wrap">
+      <div class="card">
+        <img src="./assets/pc gamer.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h3 class="card-title titulo text-dark fw-bold fs-1" data-id="1">CPU Intel I5</h3>
+          <p class="card-text descripcionProducto m-0">Lorem ipsum dolor, sit </p>
+          <div class="d-flex gap-2">
+            <button class="btn btn-primary agregarAcarrito">Agregar a carrito</button>
+            <span class="text-dark precio text-center fs-2 my-auto"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./assets/PC-AMD2.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h3 class="card-title titulo text-dark fw-bold fs-1" data-id="2">CPU Intel I5</h3>
+          <p class="card-text descripcionProducto">Lorem ipsum dolor, sit </p>
+          <div class="d-flex gap-2">
+            <button class="btn btn-primary agregarAcarrito">Agregar a carrito</button>
+            <span class="text-dark precio text-center fs-2 my-auto"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./assets/RAM-HYPER.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h3 class="card-title titulo text-dark fw-bold fs-1" data-id="3">CPU Intel I5</h3>
+          <p class="card-text descripcionProducto">Lorem ipsum dolor, sit </p>
+          <div class="d-flex gap-2">
+            <button class="btn btn-primary agregarAcarrito">Agregar a carrito</button>
+            <span class="text-dark precio text-center fs-2 my-auto"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./assets/PC-RYZEN.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h3 class="card-title titulo text-dark fw-bold fs-1" data-id="4">CPU Intel I5</h3>
+          <p class="card-text descripcionProducto">Lorem ipsum dolor, sit </p>
+          <div class="d-flex gap-2">
+            <button class="btn btn-primary agregarAcarrito">Agregar a carrito</button>
+            <span class="text-dark precio text-center fs-2 my-auto"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./assets/MOUSE-RAZER.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h3 class="card-title titulo text-dark fw-bold fs-1" data-id="5">CPU Intel I5</h3>
+          <p class="card-text descripcionProducto">Lorem ipsum dolor, sit </p>
+          <div class="d-flex gap-2">
+            <button class="btn btn-primary agregarAcarrito">Agregar a carrito</button>
+            <span class="text-dark precio text-center fs-2 my-auto"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./assets/MOUSE-RAZER.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h3 class="card-title titulo text-dark fw-bold fs-1" data-id="6">CPU Intel I5</h3>
+          <p class="card-text descripcionProducto">Lorem ipsum dolor, sit </p>
+          <div class="d-flex gap-2">
+            <button class="btn btn-primary agregarAcarrito">Agregar a carrito</button>
+            <span class="text-dark precio text-center fs-2 my-auto"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./assets/MOUSE-RAZER.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h3 class="card-title titulo text-dark fw-bold fs-1" data-id="7">CPU Intel I5</h3>
+          <p class="card-text descripcionProducto">Lorem ipsum dolor, sit </p>
+          <div class="d-flex gap-2">
+            <button class="btn btn-primary agregarAcarrito">Agregar a carrito</button>
+            <span class="text-dark precio text-center fs-2 my-auto"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./assets/MOUSE-RAZER.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h3 class="card-title titulo text-dark fw-bold fs-1" data-id="8">CPU Intel I5</h3>
+          <p class="card-text descripcionProducto">Lorem ipsum dolor, sit </p>
+          <div class="d-flex gap-2">
+            <button class="btn btn-primary agregarAcarrito">Agregar a carrito</button>
+            <span class="text-dark precio text-center fs-2 my-auto"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------------Carousel------------------- -->
+    <section class=" mt-5 p-3 bg-info bg-opacity-10 border border-info">
+      <div class="">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+          <div class="carousel-inner">
+            <div class="item active carousel-marcas">
+              <div class="bg-light d-flex justify-content-evenly">
+                <img src="./assets/carousel-marcas/AMD.png" alt="AMD">
+                <img src="./assets/carousel-marcas/As-rock.jpg" alt="As-rock">
+                <img src="./assets/carousel-marcas/Intel.jpg" alt="Intel">
+                <img src="./assets/carousel-marcas/Nvidia.png" alt="Nvidia">
+              </div>
+            </div>
+
+            <div class="item carousel-marcas">
+              <div class="bg-light d-flex justify-content-evenly">
+                <img src="./assets/carousel-marcas/DeepCool.jpg" alt="DeepCool">
+                <img src="./assets/carousel-marcas/HyperX.jpg" alt="HyperX">
+                <img src="./assets/carousel-marcas/Radeon.jpg" alt="Radeon">
+                <img src="./assets/carousel-marcas/Zotag.jpg" alt="Zotag">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ---------------Carousel------------------- -->
+
+    <h3 class="p-3 mt-5 bg-black rounded mb-3">Ofertas</h3>
+    <section class="viewPrincipal text-light mx-5 mt-0 d-flex flex-wrap">
+      <div class="card">
+        <img src="./assets/TECLADO.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h3 class="card-title titulo text-dark fw-bold fs-1" data-id="9">CPU Intel I5</h3>
+          <p class="card-text descripcionProducto">Lorem ipsum dolor, sit </p>
+          <div class="d-flex gap-2">
+            <button class="btn btn-primary agregarAcarrito">Agregar a carrito</button>
+            <span class="text-dark precio text-center fs-2 my-auto"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./assets/MOUSE-RAZER.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h3 class="card-title titulo text-dark fw-bold fs-1" data-id="10">CPU Intel I5</h3>
+          <p class="card-text descripcionProducto">Lorem ipsum dolor, sit </p>
+          <div class="d-flex gap-2">
+            <button class="btn btn-primary agregarAcarrito">Agregar a carrito</button>
+            <span class="text-dark precio text-center fs-2 my-auto"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./assets/MOUSE-RAZER.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h3 class="card-title titulo text-dark fw-bold fs-1" data-id="11">CPU Intel I5</h3>
+          <p class="card-text descripcionProducto">Lorem ipsum dolor, sit </p>
+          <div class="d-flex gap-2">
+            <button class="btn btn-primary agregarAcarrito">Agregar a carrito</button>
+            <span class="text-dark precio text-center fs-2 my-auto"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./assets/MOUSE-RAZER.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h3 class="card-title titulo text-dark fw-bold fs-1" data-id="12">CPU Intel I5</h3>
+          <p class="card-text descripcionProducto">Lorem ipsum dolor, sit </p>
+          <div class="d-flex gap-2">
+            <button class="btn btn-primary agregarAcarrito">Agregar a carrito</button>
+            <span class="text-dark precio text-center fs-2 my-auto"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./assets/FUENTE.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h3 class="card-title titulo text-dark fw-bold fs-1" data-id="13">CPU Intel I5</h3>
+          <p class="card-text descripcionProducto">Lorem ipsum dolor, sit </p>
+          <div class="d-flex gap-2">
+            <button class="btn btn-primary agregarAcarrito">Agregar a carrito</button>
+            <span class="text-dark precio text-center fs-2 my-auto"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./assets/MONITOR.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h3 class="card-title titulo text-dark fw-bold fs-1" data-id="14">CPU Intel I5</h3>
+          <p class="card-text descripcionProducto">Lorem ipsum dolor, sit </p>
+          <div class="d-flex gap-2">
+            <button class="btn btn-primary agregarAcarrito">Agregar a carrito</button>
+            <span class="text-dark precio text-center fs-2 my-auto"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./assets/WEBCAM.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h3 class="card-title titulo text-dark fw-bold fs-1" data-id="15">CPU Intel I5</h3>
+          <p class="card-text descripcionProducto">Lorem ipsum dolor, sit </p>
+          <div class="d-flex gap-2">
+            <button class="btn btn-primary agregarAcarrito">Agregar a carrito</button>
+            <span class="text-dark precio text-center fs-2 my-auto"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./assets/GABINETE.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h3 class="card-title titulo text-dark fw-bold fs-1" data-id="16">CPU Intel I5</h3>
+          <p class="card-text descripcionProducto">Lorem ipsum dolor, sit </p>
+          <div class="d-flex gap-2">
+            <button class="btn btn-primary agregarAcarrito">Agregar a carrito</button>
+            <span class="text-dark precio text-center fs-2 my-auto"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <h3 class="p-3 mt-5 bg-black rounded mb-3">Lo mas destacado</h3>
+    <section class="viewPrincipal text-light mx-5 mt-0 d-flex flex-wrap">
+      <div class="card">
+        <img src="./assets/PLACA-MADRE.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h3 class="card-title titulo text-dark fw-bold fs-1" data-id="17">CPU Intel I5</h3>
+          <p class="card-text descripcionProducto">Lorem ipsum dolor, sit </p>
+          <div class="d-flex gap-2">
+            <button class="btn btn-primary agregarAcarrito">Agregar a carrito</button>
+            <span class="text-dark precio text-center fs-2 my-auto"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./assets/MOUSE-RAZER.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h3 class="card-title titulo text-dark fw-bold fs-1" data-id="18">CPU Intel I5</h3>
+          <p class="card-text descripcionProducto">Lorem ipsum dolor, sit </p>
+          <div class="d-flex gap-2">
+            <button class="btn btn-primary agregarAcarrito">Agregar a carrito</button>
+            <span class="text-dark precio text-center fs-2 my-auto"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./assets/MOUSE-RAZER.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h3 class="card-title titulo text-dark fw-bold fs-1" data-id="19">CPU Intel I5</h3>
+          <p class="card-text descripcionProducto">Lorem ipsum dolor, sit </p>
+          <div class="d-flex gap-2">
+            <button class="btn btn-primary agregarAcarrito">Agregar a carrito</button>
+            <span class="text-dark precio text-center fs-2 my-auto"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./assets/MOUSE-RAZER.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h3 class="card-title titulo text-dark fw-bold fs-1" data-id="20">CPU Intel I5</h3>
+          <p class="card-text descripcionProducto">Lorem ipsum dolor, sit </p>
+          <div class="d-flex gap-2">
+            <button class="btn btn-primary agregarAcarrito">Agregar a carrito</button>
+            <span class="text-dark precio text-center fs-2 my-auto"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./assets/3070-TI.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h3 class="card-title titulo text-dark fw-bold fs-1" data-id="21">CPU Intel I5</h3>
+          <p class="card-text descripcionProducto">Lorem ipsum dolor, sit </p>
+          <div class="d-flex gap-2">
+            <button class="btn btn-primary agregarAcarrito">Agregar a carrito</button>
+            <span class="text-dark precio text-center fs-2 my-auto"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./assets/PROCESADOR-INTEL.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h3 class="card-title titulo text-dark fw-bold fs-1" data-id="22">CPU Intel I5</h3>
+          <p class="card-text descripcionProducto">Lorem ipsum dolor, sit </p>
+          <div class="d-flex gap-2">
+            <button class="btn btn-primary agregarAcarrito">Agregar a carrito</button>
+            <span class="text-dark precio text-center fs-2 my-auto"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./assets/PROCESADOR-AMD.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h3 class="card-title titulo text-dark fw-bold fs-1" data-id="23">CPU Intel I5</h3>
+          <p class="card-text descripcionProducto">Lorem ipsum dolor, sit </p>
+          <div class="d-flex gap-2">
+            <button class="btn btn-primary agregarAcarrito">Agregar a carrito</button>
+            <span class="text-dark precio text-center fs-2 my-auto"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./assets/MSI-RTX.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h3 class="card-title titulo text-dark fw-bold fs-1" data-id="24">CPU Intel I5</h3>
+          <p class="card-text descripcionProducto">Lorem ipsum dolor, sit </p>
+          <div class="d-flex gap-2">
+            <button class="btn btn-primary agregarAcarrito">Agregar a carrito</button>
+            <span class="text-dark precio text-center fs-2 my-auto"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-center text-lg-start text-white mt-5" style="background-color: rgb(48, 48, 70)">
+    <section class="d-flex justify-content-between p-4" style="background-color: rgb(34, 33, 33)">
+
+      <div class="me-5">
+        <span>Conectate con nuestras redes:</span>
+      </div>
+
+
+
+      <div>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+    </section>
+
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <div class="row mt-3">
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold fs-3">Hardware Argentina</h6>
+            <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 130px; background-color: #ffffff; height: 2px" />
+            <p class="text-light">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quo velit placeat voluptatibus dignissimos.
+            </p>
+          </div>
+
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <h6 class="text-uppercase fs-3 fw-bold">Productos Mas Solicitados</h6>
+            <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #ffffff; height: 2px" />
+            <p>
+              <a href="#!" class="text-white">Procesadores</a>
+            </p>
+            <p>
+              <a href="#!" class="text-white">Placas Madre</a>
+            </p>
+            <p>
+              <a href="#!" class="text-white">Memorias RAM</a>
+            </p>
+            <p>
+              <a href="#!" class="text-white">Placas de Video</a>
+            </p>
+          </div>
+
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <h6 class="text-uppercase fs-3 fw-bold">Tu Usuario</h6>
+            <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #ffffff; height: 2px" />
+            <p>
+              <a href="#!" class="text-white">Mi Cuenta</a>
+            </p>
+            <p>
+              <a href="#!" class="text-white">Crear una Cuenta</a>
+            </p>
+            <p>
+              <a href="#!" class="text-white">Ayuda</a>
+            </p>
+          </div>
+
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <h6 class="text-uppercase fs-3 fw-bold">Contactanos</h6>
+            <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #ffffff; height: 2px" />
+            <p class="fas fa-home mr-3 text-light">New York, NY 10012, US</p>
+            <p class="fas fa-envelope mr-3 text-light"> info@example.com</p>
+            <p class="fas fa-phone mr-3 text-light">+ 01 234 567 88</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+      © 2023
+      <a class="text-white" href="https://mdbootstrap.com/">Padilla Santiago - Web Developer</a>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

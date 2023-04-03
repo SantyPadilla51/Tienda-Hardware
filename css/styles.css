@@ -1,0 +1,310 @@
+:root {
+    /* Globales */
+    --primario: #9c27b0;
+    --primarioOscuro: #89119d;
+    --secundario: #ffce00;
+    --secundarioOscuro: rgb(233, 287, 2);
+    --blanco: #fff;
+    --negro: #000;
+
+    --fuentePrincipal: 'IBM Plex Mono', monospace;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: rgb(24, 24, 77);
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-family: var(--fuentePrincipal);
+}
+
+p {
+    font-size: 1.8rem;
+    color: var(--negro);
+}
+
+a {
+    color: var(--blanco);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    cursor: pointer;
+    color: #ffce00;
+}
+img {
+    max-width: 100%;
+}
+h1,
+h3 {
+    text-align: center;
+    color: var(--blanco);
+}
+
+.nav-link {
+    color: #fff;
+}
+
+.nav-link:hover {
+    color: #ffce00;
+}
+
+.cartelAgregado{
+    position:fixed;
+    z-index: 4000;
+    bottom: 5rem;
+    background-color: #020202a1;
+}
+
+@media (max-width: 768px) {
+    .cartelAgregado {
+        bottom: 5rem;
+    }
+}
+
+.scale-in-ver-center {
+    -webkit-animation: scale-in-ver-center 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: scale-in-ver-center 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes scale-in-ver-center {
+    0% {
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+
+@keyframes scale-in-ver-center {
+    0% {
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+
+/*-------------------------FIN DE GLOBALES--------------*/
+
+/*-------------------------INICIO DE HEADER--------------*/
+header {
+    z-index: 3000;
+    width: 100%;
+}
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+}
+.buscador {
+    width: 60rem;
+}
+.menu_hamburguesa {
+    display: none;
+}
+@media (max-width: 768px) {
+    .menu_hamburguesa {
+        display: flex;
+    }
+
+    .logo_principal {
+        margin: 0 auto;
+    }
+
+    .buscador {
+        width: 35rem;
+        margin-bottom: 1rem;
+    }
+
+    .contadorCarrito {
+        position: relative;
+        top: -11px;
+        left: 13px;
+    }
+}
+
+.swing-in-top-fwd {
+    -webkit-animation: swing-in-top-fwd 0.4s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+    animation: swing-in-top-fwd 0.4s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+}
+
+@-webkit-keyframes swing-in-top-fwd {
+    0% {
+        -webkit-transform: rotateX(-100deg);
+        transform: rotateX(-100deg);
+        -webkit-transform-origin: top;
+        transform-origin: top;
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: rotateX(0deg);
+        transform: rotateX(0deg);
+        -webkit-transform-origin: top;
+        transform-origin: top;
+        opacity: 1;
+    }
+}
+
+@keyframes swing-in-top-fwd {
+    0% {
+        -webkit-transform: rotateX(-100deg);
+        transform: rotateX(-100deg);
+        -webkit-transform-origin: top;
+        transform-origin: top;
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: rotateX(0deg);
+        transform: rotateX(0deg);
+        -webkit-transform-origin: top;
+        transform-origin: top;
+        opacity: 1;
+    }
+}
+
+/*-------------------------FIN DE HEADER--------------*/
+
+/*-------------------------Main de Productos--------------*/
+.viewPrincipal {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+    margin-top: 1rem;
+}
+.asideCategorias {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.listaCategorias {
+    list-style: none;
+    margin-left: 0.5rem;
+    margin-top: 2rem;
+}
+
+.card {
+    margin: 0 auto;
+    width: 25rem;
+    height: 30rem;
+}
+
+.card .card-body {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.agregarAcarrito,
+.eliminar_del_carrito {
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.card img {
+    margin: 0 auto;
+    width: 12rem;
+    height: 11rem;
+}
+.carousel-marcas div img{
+    gap: 2px;
+    width: 10%;
+}
+@media (max-width: 768px) {
+    .encabezados{
+        margin-bottom: 0;
+    }
+    .card img {
+        width: 14rem;
+        height: 13rem;
+    }
+    .agregarAcarrito {
+        font-size: 15px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    .precio {
+        margin-left: 2rem;
+    }
+    .viewPrincipal {
+        display: block;
+        margin-left: 0;
+    }
+    .card {
+        width: 90%;
+        margin-top: 2rem;
+    }
+    .carousel-inner .item img {
+        height: 13rem;
+    }
+    .carousel-marcas div img{
+        width: 25%;
+    }
+}
+
+.slide-out-left {
+    -webkit-animation: slide-out-left 0.6s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation: slide-out-left 0.6s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+@-webkit-keyframes slide-out-left {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: translateX(-1000px);
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+}
+
+@keyframes slide-out-left {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: translateX(-1000px);
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+}
+
+/* -----------------------Footer------------------------------------ */
+.footer {
+    background-color: var(--negro);
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+.footer__texto {
+    text-align: center;
+    font-size: 2.2rem;
+}

@@ -1,0 +1,105 @@
+:root {
+    /* Globales */
+    --primario: #9c27b0;
+    --primarioOscuro: #89119d;
+    --secundario: #ffce00;
+    --secundarioOscuro: rgb(233,287,2);
+    --blanco: #fff;
+    --negro: #000;
+
+    --fuentePrincipal: 'IBM Plex Mono', monospace;
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    background-color: rgb(24, 24, 77);
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-family: var(--fuentePrincipal);
+}
+p {
+    font-size: 1.8rem;
+    color: var(--negro);
+}
+a {
+    color: var(--blanco);
+    text-decoration: none;
+}
+a:hover{
+    cursor: pointer;
+    color: #ffce00;
+}
+img {
+    max-width: 100%;
+}
+h1, h1, h3 {
+    text-align: center;
+    color: var(--blanco);
+}
+h1 {
+    font-size: 4rem;
+}
+h2 {
+    font-size: 3.2rem;
+}
+h3 {
+    font-size: 2.4rem;
+}
+h4{
+    color: var(--blanco);
+}
+label{
+    color: var(--blanco);
+}
+.nav-link{
+    margin-left: 4rem;
+    color: #fff;
+}
+.nav-link:hover{
+    color: #ffce00;
+}
+
+/* ------------------------------------------------- */
+header{
+    position: relative;
+    top: 0;
+    z-index: 3000;
+    width: 100%;
+}
+#logoPrincipal{
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    #logoPrincipal{
+        justify-content: center;
+        margin: 0 auto;
+    }
+}
+
+/* ----------------FORMULARIO SESION------------- */
+.formularioSesion{
+    position:relative;
+    z-index: 3300;
+    margin: 0 auto;
+    top: 6rem;
+    width: 80%;
+    background-color: var(--negro);
+    padding: 4rem;
+}
+@media (min-width:992px) {
+    .formularioSesion{
+        width: 50%;
+    }
+}
+@media (min-width:1200px) {
+    .formularioSesion{
+        width: 40%;
+    }
+}
