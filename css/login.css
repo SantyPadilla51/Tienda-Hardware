@@ -1,5 +1,5 @@
 :root {
-    /* Globales */
+    
     --primario: #9c27b0;
     --primarioOscuro: #89119d;
     --secundario: #ffce00;
@@ -64,7 +64,7 @@ label{
     color: #ffce00;
 }
 
-/* ------------------------------------------------- */
+
 header{
     position: relative;
     top: 0;
@@ -83,7 +83,7 @@ header{
     }
 }
 
-/* ----------------FORMULARIO SESION------------- */
+
 .formularioSesion{
     position:relative;
     z-index: 3300;
