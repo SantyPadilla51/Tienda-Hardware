@@ -110,8 +110,8 @@
                 behavior: "smooth"
             });
             setTimeout(() => {
-                mainCarrito.classList.add('opacity-50')
-                compraRealizada.classList.remove('visually-hidden')
+                mainCarrito.classList.remove('opacity-50')
+                compraRealizada.classList.add('visually-hidden')
             }, 2500);
         }
     }
