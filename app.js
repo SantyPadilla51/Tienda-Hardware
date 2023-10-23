@@ -2,14 +2,23 @@
     const allProducts = document.querySelector('.main');
     const carrito = document.querySelector('.contadorCarrito');
     const precios = document.querySelectorAll('span.precio');
+    const flecha = document.querySelector('.flecha');
     let productosCarrito = [];
 
     allProducts.addEventListener('click', agregarALcarrito);
+    flecha.addEventListener('click', backTOP)
     document.addEventListener('DOMContentLoaded', () => {
         productosCarrito = JSON.parse(localStorage.getItem('carrito') || []);
         carrito.textContent = productosCarrito.length;
         getRandomInt();
     });
+
+    function backTOP() {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    }
 
     function getRandomInt() {
         precios.forEach(precio => {
@@ -17,12 +26,12 @@
             precio.textContent = `$${precio_random}`
         })
     }
-    
+
     function agregarALcarrito(e) {
         e.preventDefault();
         const btnCarrito = e.target;
         const producto = e.target.parentElement.parentElement.parentElement;
-        
+
         if (btnCarrito.textContent === 'Agregar a carrito') {
             btnCarrito.textContent = 'Quitar del Carrito';
             leerDatos(producto);
@@ -73,7 +82,6 @@
             alerta.classList.add('d-none')
         }, 2000);
     };
-
 
 })();
 

@@ -73,6 +73,16 @@ h3 {
     }
 }
 
+.flecha{
+    position:sticky;
+    color: antiquewhite;
+    width: 40px;
+    background-color: #0000008a;
+    top: 90%;
+    left: 88%;
+    border: none;
+}
+
 .scale-in-ver-center {
     -webkit-animation: scale-in-ver-center 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     animation: scale-in-ver-center 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
