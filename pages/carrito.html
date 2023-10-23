@@ -42,11 +42,6 @@
           Hardware Argentina
         </a>
 
-        <form class="d-flex buscador" role="search">
-          <input class="form-control me-2" type="search" placeholder="Buscar">
-          <button class="btn btn-outline-success" type="submit">Buscar</button>
-        </form>
-
         <a href="./carrito.html">
           <button class=" btn btn-light fs-5 rounded d-flex text-uppercase p-2">
             <div>
@@ -74,33 +69,6 @@
         </a>
       </div>
     </nav>
-
-    <section class="bg-black d-flex justify-content-evenly p-3">
-      <div class="dropdown">
-        <a class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-          Categorias
-        </a>
-        <ul class="dropdown-menu swing-in-top-fwd mt-5 fs-3">
-          <li><a class="dropdown-item" href="#">Procesadores</a></li>
-          <li><a class="dropdown-item" href="#">Placas Madres</a></li>
-          <li><a class="dropdown-item" href="#">Monitores</a></li>
-          <li><a class="dropdown-item" href="#">Memorias RAM</a></li>
-          <li><a class="dropdown-item" href="#">Fuentes</a></li>
-          <li><a class="dropdown-item" href="#">Placas de Video</a></li>
-          <li><a class="dropdown-item" href="#">Perifericos</a></li>
-          <li><a class="dropdown-item" href="#">Fuentes</a></li>
-          <li><a class="dropdown-item" href="#">Almacenamiento</a></li>
-          <li><a class="dropdown-item" href="#">Refrigeracion</a></li>
-          <li><a class="dropdown-item" href="#">Gabinetes</a></li>
-          <li><a class="dropdown-item" href="#"></a></li>
-
-        </ul>
-      </div>
-      
-      <a href="">Ofertas</a>
-      <a href="">Nosotros</a>
-      <a href="/pages/ayuda.html">Ayuda</a>
-    </section>
   </header>
 
   <main class="main_carrito">
@@ -111,13 +79,18 @@
     <div class=" mx-5 mt-5 bg-dark p-3 d-flex flex-column justify-content-end">
       <div class="text-light border-bottom d-flex justify-content-between">
         <h3 class="fw-light">Total de la compra</h3>
-        <h3 id="total" class="fw-light" ></h3> 
+        <h3 id="total" class="fw-light"></h3>
       </div>
-      
-      <button class="btn rounded-0 fs-3 text-light bg-primary mt-4">Comprar</button>
+      <button class="btn rounded-0 fs-3 text-light bg-primary mt-4" id="comprar">Comprar</button>
     </div>
-
   </main>
+  <div id="alertCompraExistosa" class="bg-success border border-5 border-success-subtle rounded w-50 visually-hidden">
+    <h3>Tu compra se realizo correctamente</h3>
+  </div>
+
+  <div id="alertCompraRechazada" class="bg-danger border border-5 border-danger-subtle rounded w-50 visually-hidden">
+    <h3>Aun no tienes articulos en tu carrito</h3>
+  </div>
 
   <script src="../js/carrito.js"></script>
 </body>
