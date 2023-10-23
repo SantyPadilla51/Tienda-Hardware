@@ -89,17 +89,30 @@
         contenedor_carrito.appendChild(mensajeVacio);
     };
 
-    function realizarCompra(e){
+    function realizarCompra(e) {
         e.preventDefault();
-        if(localStorage.getItem('carrito').length == 2){
+        if (localStorage.getItem('carrito').length == 2) {
             mainCarrito.classList.add('opacity-50')
             compraRechazada.classList.remove('visually-hidden')
+            window.scrollTo({
+                top: 20,
+                behavior: "smooth"
+            });
             setTimeout(() => {
-                compraRechazada.classList.add('scale-in-center')
-            }, 500);
-        } else{
+                mainCarrito.classList.remove('opacity-50')
+                compraRechazada.classList.add('visually-hidden')
+            }, 2500);
+        } else {
             mainCarrito.classList.add('opacity-50')
             compraRealizada.classList.remove('visually-hidden')
+            window.scrollTo({
+                top: 20,
+                behavior: "smooth"
+            });
+            setTimeout(() => {
+                mainCarrito.classList.add('opacity-50')
+                compraRealizada.classList.remove('visually-hidden')
+            }, 2500);
         }
     }
 
